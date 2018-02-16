@@ -29,10 +29,10 @@ class CreateItemsTable extends AbstractMigration
     public function change()
     {
         $table = $this->table('items');
-        $table->addColumn('category_id', 'integer', ['limit' => 11, 'signed' => false])
-            ->addColumn('name', 'string', ['limit' => 50])
-            ->addColumn('price', 'decimal', ['precision' => 10, 'scale' => 2, 'signed' => false])
-            ->addColumn('created', 'datetime')
+        $table->addColumn('category_id', 'integer', ['limit' => 11, 'signed' => false, 'default' => 0, 'null' => false])
+            ->addColumn('name', 'string', ['limit' => 50, 'default' => '', 'null' => false])
+            ->addColumn('price', 'decimal', ['precision' => 10, 'scale' => 2, 'signed' => false, 'default' => 0, 'null' => false])
+            ->addColumn('created', 'datetime', ['default' => 'CURRENT_TIMESTAMP', 'null' => false])
             ->addColumn('updated', 'datetime', ['null' => true])
             ->create();
     }
