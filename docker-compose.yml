@@ -23,7 +23,5 @@ services:
   php:
     build:
       context: .docker/php
-    depends_on:
-      - mysql
     volumes:
       - .:/var/www/html
