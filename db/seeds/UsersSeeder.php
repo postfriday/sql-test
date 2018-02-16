@@ -15,7 +15,7 @@ class UsersSeeder extends AbstractSeed
      */
     public function run()
     {
-        $faker = Faker\Factory::create();
+        $faker = Faker\Factory::create('ru_RU');
         $genders = ['male' => 'M', 'female' => 'F'];
         $data = [];
         for ($i = 0; $i < 100; $i++) {
