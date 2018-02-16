@@ -15,7 +15,7 @@ class UsersBannedSeeder extends AbstractSeed
      */
     public function run()
     {
-        $users = [0];
+        $users = [];
         for ($i = 0; $i < 20; $i++) {
             do {
                 $user_id = rand(1, 100);
