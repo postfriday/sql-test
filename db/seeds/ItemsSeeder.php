@@ -5,7 +5,6 @@ use Phinx\Seed\AbstractSeed;
 
 class ItemsSeeder extends AbstractSeed
 {
-    private $tablename = 'items';
     /**
      * Run Method.
      *
@@ -26,6 +25,6 @@ class ItemsSeeder extends AbstractSeed
                 'created'       => date('Y-m-d H:i:s'),
             ];
         }
-        $this->insert($this->tablename, $data);
+        $this->insert('items', $data);
     }
 }
