@@ -5,6 +5,6 @@
 1. Дождаться выполнения `composer install`
 1. Выполняем миграции: `docker-compose exec php php vendor/bin/phinx migrate`
 1. Сидируем данные: `docker-compose exec php php vendor/bin/phinx seed:run`
-1. Подключаемся к БД помощью клиента на `localhost:3306` (login: `homestead`, password: `secret`)
+1. Подключаемся к БД с помощью клиента на `localhost:3306` (login: `homestead`, password: `secret`)
 1. Выполняем тестовое задание.
 1. Выключаем проект: `docker-compose down`
